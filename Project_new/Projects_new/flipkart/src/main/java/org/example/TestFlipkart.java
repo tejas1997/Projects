@@ -1,14 +1,14 @@
 package org.example;
+
+public class TestFlipkart {
+package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.AfterClass;
-import java.time.Duration;
-import java.util.Collections;
-import java.util.List;
 
 public class Main
 {
@@ -41,4 +41,5 @@ public class Main
       {
           driver.quit();
       }
+}
 }
