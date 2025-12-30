@@ -16,8 +16,8 @@ public class HomePage {
     }
 
     public void search(String text) {
-        WebElement searchInput = driver.findElement(searchBox);
-        searchInput.sendKeys(text);
-        searchInput.sendKeys(Keys.ENTER);
+        WebElement search = driver.findElement(searchBox);
+        search.sendKeys(text);
+        search.sendKeys(Keys.ENTER);
     }
 }
