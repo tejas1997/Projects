@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 1.608 s <<< FAILURE! -- in TestSuite
-TestFlipkart.setUp -- Time elapsed: 1.496 s <<< FAILURE!
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 4.179 s <<< FAILURE! -- in TestSuite
+TestFlipkart.setUp -- Time elapsed: 4.079 s <<< FAILURE!
 org.openqa.selenium.SessionNotCreatedException: 
 Could not start a new session. Response code 500. Message: session not created
 from unknown error: cannot find Chrome binary 

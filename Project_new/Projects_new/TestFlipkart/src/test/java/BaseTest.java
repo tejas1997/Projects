@@ -14,12 +14,28 @@ public class BaseTest
     @BeforeMethod
     public void setUp()
     {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        String osName = System.getProperty("os.name").toLowerCase();
+
+        if (osName.contains("linux")) {
+        // For GitHub Codespaces / CI
+        options.addArguments("--headless=new");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--remote-allow-origins=*");
+        } 
+        else 
+            {
+              // For Local Windows / Mac
+              options.addArguments("--start-maximized");
+            }
+
+        driver = new ChromeDriver(options);
+    }
 
         driver.manage().window().maximize();
         driver.get("https://www.flipkart.com/");
-    }
     @AfterMethod
     public void tearDown()
     {
