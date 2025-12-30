@@ -11,6 +11,8 @@ public class BaseTest
 {
     public WebDriver driver;
 
+    WebDriverManager.chromedriver().setup();
+
     @BeforeMethod
     public void setUp()
     {
