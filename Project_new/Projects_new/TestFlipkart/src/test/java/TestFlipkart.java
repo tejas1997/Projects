@@ -1,3 +1,6 @@
+import org.testng.annotations.Test;
+import org.testng.Assert;
+
 public class TestFlipkart extends BaseTest{
 
     @Test  
