@@ -10,40 +10,14 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class TestFlipkart {
-
-    WebDriver driver;
-
-    @BeforeClass
-    public void beforeClass() {
-        WebDriverManager.chromedriver().setup(); // 3. Setup Driver
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.flipkart.com/");
-
-        try {
-            // Wait a moment for page load
-            Thread.sleep(2000); 
-            WebElement searchBox = driver.findElement(By.name("q"));
-            searchBox.sendKeys("iPhone", Keys.ENTER);
-            
-            Thread.sleep(3000); // Wait for results
-            WebElement str = driver.findElement(By.xpath("//span[contains(text(), 'Showing')]"));
-            System.out.println("Results text: " + str.getText());
-        } catch (Exception e) {
-            System.out.println("Error during setup: " + e.getMessage());
-        }
-    }
+public class TestFlipkart extends BaseTest{
 
     @Test  
-    public void test() {
-        System.out.println("Test execution started...");
-    }
-
-    @AfterClass
-    public void afterClass() {
-        if (driver != null) {
-            driver.quit();
-        }
+    public void test() 
+    {
+        HomePage homePage = new HomePage(driver);
+        homePage.search("iPhone");
+        String expectedUrl = "https://www.flipkart.com/search?q=iPhone&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off";
+        Assert.assertEquals(driver.getCurrentUrl(), expectedUrl, "Search failed!");
     }
 }
