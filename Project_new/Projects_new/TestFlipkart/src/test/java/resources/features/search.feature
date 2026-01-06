@@ -1,7 +1,8 @@
 Feature: Search Automation of Flipkart
-Scenario: Check search is successful
-Given User is on Homepage
-And User clicks on searchbar
-When User seach for iPhone in searchbar
-And User hits enter key
-Then User is redirected to search result displaying results for iPhone
+
+  Scenario: Check search is successful
+    Given user is on the Flipkart homepage
+    When user clicks on the search bar
+    And user searches for "iPhone"
+    And user presses the Enter key
+    Then search results for "iPhone" should be displayed
