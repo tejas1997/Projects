@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-12-31T00:17:06 IST" name="Flipkart Test Suite" finished-at="2025-12-31T00:17:12 IST" duration-ms="5616">
+    <groups>
+    </groups>
+    <test started-at="2025-12-31T00:17:06 IST" name="Flipkart Tests" finished-at="2025-12-31T00:17:12 IST" duration-ms="5616">
+      <class name="TestFlipkart">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-31T00:17:06 IST" name="setUp" finished-at="2025-12-31T00:17:10 IST" duration-ms="3535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-31T00:17:10 IST" name="test" finished-at="2025-12-31T00:17:12 IST" duration-ms="1664" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+<<<<<<< HEAD
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-31T00:17:12 IST" name="tearDown" finished-at="2025-12-31T00:17:12 IST" duration-ms="379" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-30T23:59:53 IST" name="tearDown" finished-at="2025-12-30T23:59:53 IST" duration-ms="328" status="PASS">
+=======
+>>>>>>> 272fe4acdd7118d41c961ad9bd79c114ad963e2e
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
@@ -157,7 +182,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2026-01-06T06:51:41 UTC" name="tearDown" finished-at="2026-01-06T06:51:41 UTC" duration-ms="0" status="SKIP">
+=======
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2025-12-30T18:43:14 UTC" name="tearDown" finished-at="2025-12-30T18:43:14 UTC" duration-ms="0" status="SKIP">
+>>>>>>> 475b086 (no change)
+>>>>>>> 409ce997efa4aeda713c691664156b74af5a9913
+>>>>>>> 272fe4acdd7118d41c961ad9bd79c114ad963e2e
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

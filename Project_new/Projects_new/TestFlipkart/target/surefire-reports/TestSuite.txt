@@ -1,8 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 1.318 s <<< FAILURE! -- in TestSuite
 TestFlipkart.setUp -- Time elapsed: 1.219 s <<< FAILURE!
+=======
+<<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.146 s -- in TestSuite
+=======
+<<<<<<< HEAD
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.121 s -- in TestSuite
+=======
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 3.901 s <<< FAILURE! -- in TestSuite
+TestFlipkart.setUp -- Time elapsed: 3.800 s <<< FAILURE!
+>>>>>>> 272fe4acdd7118d41c961ad9bd79c114ad963e2e
 org.openqa.selenium.SessionNotCreatedException: 
 Could not start a new session. Response code 500. Message: session not created
 from unknown error: cannot find Chrome binary 
@@ -62,3 +73,8 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goo
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
+<<<<<<< HEAD
+=======
+>>>>>>> 475b086 (no change)
+>>>>>>> 409ce997efa4aeda713c691664156b74af5a9913
+>>>>>>> 272fe4acdd7118d41c961ad9bd79c114ad963e2e
