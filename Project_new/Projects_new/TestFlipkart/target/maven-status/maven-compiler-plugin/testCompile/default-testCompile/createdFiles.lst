@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-BaseTest.class
-pages\HomePage.class
-TestFlipkart.class
-=======
->>>>>>> 859bd0e (corrected BaseTest)
-=======
 pages/HomePage.class
 TestFlipkart.class
 BaseTest.class
->>>>>>> 475b086 (no change)

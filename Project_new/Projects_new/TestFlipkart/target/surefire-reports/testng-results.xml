@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-12-30T23:59:47 IST" name="Flipkart Test Suite" finished-at="2025-12-30T23:59:53 IST" duration-ms="5646">
-    <groups>
-    </groups>
-    <test started-at="2025-12-30T23:59:47 IST" name="Flipkart Tests" finished-at="2025-12-30T23:59:53 IST" duration-ms="5646">
-      <class name="TestFlipkart">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-30T23:59:47 IST" name="setUp" finished-at="2025-12-30T23:59:51 IST" duration-ms="3550" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="test()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-30T23:59:51 IST" name="test" finished-at="2025-12-30T23:59:53 IST" duration-ms="1736" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@5cee5251]" started-at="2025-12-30T23:59:53 IST" name="tearDown" finished-at="2025-12-30T23:59:53 IST" duration-ms="328" status="PASS">
-=======
 <testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-30T18:43:11 UTC" name="Flipkart Test Suite" finished-at="2025-12-30T18:43:14 UTC" duration-ms="3125">
+  <suite started-at="2026-01-06T06:51:40 UTC" name="Flipkart Test Suite" finished-at="2026-01-06T06:51:41 UTC" duration-ms="976">
     <groups>
     </groups>
-    <test started-at="2025-12-30T18:43:11 UTC" name="Flipkart Tests" finished-at="2025-12-30T18:43:14 UTC" duration-ms="3125">
+    <test started-at="2026-01-06T06:51:40 UTC" name="Flipkart Tests" finished-at="2026-01-06T06:51:41 UTC" duration-ms="976">
       <class name="TestFlipkart">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2025-12-30T18:43:11 UTC" name="setUp" finished-at="2025-12-30T18:43:14 UTC" duration-ms="3090" status="FAIL">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2026-01-06T06:51:40 UTC" name="setUp" finished-at="2026-01-06T06:51:41 UTC" duration-ms="942" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: session not created
@@ -101,7 +82,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="test()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2025-12-30T18:43:14 UTC" name="test" finished-at="2025-12-30T18:43:14 UTC" duration-ms="0" status="SKIP">
+        <test-method signature="test()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2026-01-06T06:51:41 UTC" name="test" finished-at="2026-01-06T06:51:41 UTC" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: session not created
@@ -176,8 +157,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2025-12-30T18:43:14 UTC" name="tearDown" finished-at="2025-12-30T18:43:14 UTC" duration-ms="0" status="SKIP">
->>>>>>> 475b086 (no change)
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestFlipkart@7c469c48]" started-at="2026-01-06T06:51:41 UTC" name="tearDown" finished-at="2026-01-06T06:51:41 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
