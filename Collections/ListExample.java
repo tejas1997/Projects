@@ -6,31 +6,25 @@ import java.util.Scanner;
      public static void main(String[] args) {
          // Create a list
          List<String> list = new ArrayList<>();
-
-         // add(E element)
-         list.add("Apple");
-         list.add("Banana");
-         list.add("Cherry");
-
-         // get(int index)
-         String secondElement = list.get(1); // "Banana"
-         String str;
-         Scanner scn = new Scanner(System.in);
-         str = scn.nextLine();
-
+            String str;
+            Scanner scn = new Scanner(System.in);
+            str = scn.nextLine();
+         List<Integer> listInt = new ArrayList<>();
+         int i;
+         Scanner scn1 = new Scanner(System.in);
+            i = scn1.nextInt();
+         
          // set(int index, E element)
-            list.set(1, str);
-
-         // remove(int index)
-         list.remove(0); // Removes "Apple"
+            list.add(str);
+            listInt.add(i);
 
          // size()
          int size = list.size(); // 2
 
          // Print the list
-         System.out.println(list); // Output: [Blueberry, Cherry]
-
+         System.out.println(list); 
          // Print the size of the list
-         System.out.println(size); // Output: 2
+         System.out.println(size); // Output: 1
+         System.out.println(listInt);
      }
  }
