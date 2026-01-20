@@ -1,5 +1,6 @@
 import java.util.ArrayList;
  import java.util.List;
+import java.util.Scanner;
 
  public class ListExample {
      public static void main(String[] args) {
@@ -13,9 +14,12 @@ import java.util.ArrayList;
 
          // get(int index)
          String secondElement = list.get(1); // "Banana"
+         String str;
+         Scanner scn = new Scanner(System.in);
+         str = scn.nextLine();
 
          // set(int index, E element)
-         list.set(1, "Blueberry");
+            list.set(1, str);
 
          // remove(int index)
          list.remove(0); // Removes "Apple"
