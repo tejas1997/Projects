@@ -7,4 +7,4 @@ Feature: WebDriver University Contact Us Page
         And I enter a unique email address
         And I enter a unique comment
         And I click on the submit button
-        Then I should be presented with a successful submission message 
+        Then I should be presented with a successful submission message
