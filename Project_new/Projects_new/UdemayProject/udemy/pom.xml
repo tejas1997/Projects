@@ -27,7 +27,7 @@
 
     <configuration>
         <systemPropertyVariables>
-            <cucumber.glue>stepDefinitions</cucumber.glue>
+            <cucumber.glue>stepdefinitions</cucumber.glue>
             <cucumber.features>src/test/resources/features</cucumber.features>
         </systemPropertyVariables>
     </configuration>
