@@ -1,10 +1,12 @@
 package stepdefinitions;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,158 +19,82 @@ import io.cucumber.java.en.When;
 * This class contains step definitions for Cucumber scenarios.
 * Each method represents a step that can be used in feature files.
 */
-public class stepDefinitions {
+public class StepDefinitions {
 
     private WebDriver driver;
-    private WebDriverWait wait;
 
-    public stepDefinitions() {
-        // Initialize WebDriver and WebDriverWait if needed
-        // this.driver = DriverManager.getDriver();
-        // this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    @Before
+    public void setUp() {
+        // Initialize WebDriver here (e.g., using WebDriverManager or manually)
+        // Example: driver = new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);   
+        chromeOptions.addArguments("--remote-allow-origins=*");
+        driver = new ChromeDriver(chromeOptions);
+        driver.manage().window().maximize();
     }
+
+    @After
+    public void tearDown() {
+        // Quit WebDriver after each scenario
+        driver.quit();
+    }
+
 
     /**
     * Step: Given I access the WebDriver University Contact Us Page
     */
-    @Given("I access the WebDriver University Contact Us Page")
-    public void iAccessTheWebdriverUniversityContactUsPage() {
-        try {
-            // TODO: Implement step logic for: I access the WebDriver University Contact Us Page
-            // Setup/precondition logic
-            // Setup test data or initial state
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I access the WebDriver University Contact Us Page", e);
-        }
-    }
+   @Given("I access the WebDriver University Contact Us Page")
+    public void i_access_the_WebDriver_University_Contact_Us_Page() {
+    System.out.println("Test01");
+}
 
     /**
     * Step: When I enter a unique first name
     */
     @When("I enter a unique first name")
-    public void iEnterAUniqueFirstName() {
-        try {
-            // TODO: Implement step logic for: I enter a unique first name
-            // Action/interaction logic
-            // WebElement inputField = driver.findElement(By.id("inputId"));
-            // inputField.sendKeys("value");
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I enter a unique first name", e);
-        }
+    public void i_enter_a_unique_first_name() {
+       System.out.println("Test02");
     }
 
     /**
     * Step: Given I enter a unique last name
     */
     @And("I enter a unique last name")
-    public void iEnterAUniqueLastName() {
-        try {
-            // TODO: Implement step logic for: I enter a unique last name
-            // Setup/precondition logic
-            // Setup test data or initial state
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I enter a unique last name", e);
-        }
+    public void i_enter_a_unique_last_name() {
+        System.out.println("Test03");
     }
 
     /**
     * Step: Given I enter a unique email address
     */
     @And("I enter a unique email address")
-    public void iEnterAUniqueEmailAddress() {
-        try {
-            // TODO: Implement step logic for: I enter a unique email address
-            // Setup/precondition logic
-            // Setup test data or initial state
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I enter a unique email address", e);
-        }
+    public void i_enter_a_unique_email_address() {
+        System.out.println("Test04");
     }
 
     /**
     * Step: Given I enter a unique comment
     */
     @And("I enter a unique comment")
-    public void iEnterAUniqueComment() {
-        try {
-            // TODO: Implement step logic for: I enter a unique comment
-            // Setup/precondition logic
-            // Setup test data or initial state
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I enter a unique comment", e);
-        }
+    public void i_enter_a_unique_comment() {
+        System.out.println("Test05");
     }
 
     /**
     * Step: Given I click on the submit button
     */
     @And("I click on the submit button")
-    public void iClickOnTheSubmitButton() {
-        try {
-            // TODO: Implement step logic for: I click on the submit button
-            // Setup/precondition logic
-            // Setup test data or initial state
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I click on the submit button", e);
-        }
+    public void i_click_on_the_submit_button() {
+        System.out.println("Test06");
     }
 
     /**
     * Step: Then I should be presented with a successful submission message
     */
     @Then("I should be presented with a successful submission message")
-    public void iShouldBePresentedWithASuccessfulSubmissionMessage() {
-        try {
-            // TODO: Implement step logic for: I should be presented with a successful submission message
-            // Verification/assertion logic
-            // Verify the expected outcome
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: I should be presented with a successful submission message", e);
-        }
+    public void i_should_be_presented_with_a_successful_submission_message() {
+        System.out.println("Test07");
     }
-    /**
-    * Helper method to find element with wait
-    */
-    private WebElement findElementWithWait(By locator) {
-        return wait.until(driver -> driver.findElement(locator));
-    }
-
-    /**
-    * Helper method to verify element is displayed
-    */
-    private boolean isElementDisplayed(By locator) {
-        try {
-            return driver.findElement(locator).isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
+    
 }
