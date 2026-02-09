@@ -25,13 +25,22 @@ public class StepDefinitions {
 
     @Before
     public void setUp() {
-        // Initialize WebDriver here (e.g., using WebDriverManager or manually)
-        // Example: driver = new ChromeDriver();
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);   
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
-        driver.manage().window().maximize();
+    // Initialize WebDriver here (e.g., using WebDriverManager or manually)
+    // Example: driver = new ChromeDriver();
+    ChromeOptions chromeOptions = new ChromeOptions();
+    chromeOptions.addArguments("--headless=new");
+    chromeOptions.addArguments("--window-size=1920,1080");
+    chromeOptions.addArguments("--remote-allow-origins=*");
+
+    String os = System.getProperty("os.name").toLowerCase();
+
+    if (os.contains("linux")) {
+    chromeOptions.addArguments("--no-sandbox");
+    chromeOptions.addArguments("--disable-dev-shm-usage");
+    chromeOptions.addArguments("--disable-gpu");
+}
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+    driver = new ChromeDriver(chromeOptions);
     }
 
     @After
