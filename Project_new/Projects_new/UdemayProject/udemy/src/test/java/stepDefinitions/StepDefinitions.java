@@ -4,6 +4,8 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.By;
+import org.apache.commons.lang3.RandomStringUtils;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -49,13 +51,16 @@ public class StepDefinitions {
         driver.quit();
     }
 
+public String generateRandomNumber(int length) {
+        return RandomStringUtils.randomNumeric(length);
+    }
 
     /**
     * Step: Given I access the WebDriver University Contact Us Page
     */
    @Given("I access the WebDriver University Contact Us Page")
     public void i_access_the_WebDriver_University_Contact_Us_Page() {
-    System.out.println("Test01");
+    driver.get("https://webdriveruniversity.com/Contact-Us/contactus.html");
 }
 
     /**
@@ -63,7 +68,7 @@ public class StepDefinitions {
     */
     @When("I enter a unique first name")
     public void i_enter_a_unique_first_name() {
-       System.out.println("Test02");
+       driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys("John" + generateRandomNumber(5));
     }
 
     /**
@@ -71,7 +76,7 @@ public class StepDefinitions {
     */
     @And("I enter a unique last name")
     public void i_enter_a_unique_last_name() {
-        System.out.println("Test03");
+        driver.findElement(By.xpath("//input[@name='last_name']")).sendKeys("Doe" + generateRandomNumber(5));
     }
 
     /**
@@ -79,7 +84,7 @@ public class StepDefinitions {
     */
     @And("I enter a unique email address")
     public void i_enter_a_unique_email_address() {
-        System.out.println("Test04");
+        driver.findElement(By.xpath("//input[@name='email']")).sendKeys("john.doe@example.com");
     }
 
     /**
@@ -87,7 +92,7 @@ public class StepDefinitions {
     */
     @And("I enter a unique comment")
     public void i_enter_a_unique_comment() {
-        System.out.println("Test05");
+        driver.findElement(By.xpath("//textarea[@name='message']")).sendKeys("This is a unique comment.");
     }
 
     /**
