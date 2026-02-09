@@ -55,6 +55,10 @@ public String generateRandomNumber(int length) {
         return RandomStringUtils.randomNumeric(length);
     }
 
+public String generateRandomString(int length) {
+        return RandomStringUtils.randomAlphabetic(length);
+    }
+
     /**
     * Step: Given I access the WebDriver University Contact Us Page
     */
@@ -84,7 +88,7 @@ public String generateRandomNumber(int length) {
     */
     @And("I enter a unique email address")
     public void i_enter_a_unique_email_address() {
-        driver.findElement(By.xpath("//input[@name='email']")).sendKeys("john.doe@example.com");
+        driver.findElement(By.xpath("//input[@name='email']")).sendKeys("john.doe" + generateRandomNumber(5) + "@example.com");
     }
 
     /**
@@ -92,7 +96,7 @@ public String generateRandomNumber(int length) {
     */
     @And("I enter a unique comment")
     public void i_enter_a_unique_comment() {
-        driver.findElement(By.xpath("//textarea[@name='message']")).sendKeys("This is a unique comment.");
+        driver.findElement(By.xpath("//textarea[@name='message']")).sendKeys("This is a unique comment " + generateRandomString(10) +".");
     }
 
     /**
