@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import org.openqa.selenium.PageLoadStrategy;
+import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -104,7 +105,7 @@ public String generateRandomString(int length) {
     */
     @And("I click on the submit button")
     public void i_click_on_the_submit_button() {
-        System.out.println("Test06");
+        driver.findElement(By.xpath("//input[@value='SUBMIT']")).click();
     }
 
     /**
