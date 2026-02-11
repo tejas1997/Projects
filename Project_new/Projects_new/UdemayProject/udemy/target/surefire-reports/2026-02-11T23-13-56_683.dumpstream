@@ -1,0 +1,5 @@
+# Created at 2026-02-11T23:13:56.913
+Boot Manifest-JAR contains absolute paths in classpath 'F:\Projects\Project_new\Projects_new\UdemayProject\udemy\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

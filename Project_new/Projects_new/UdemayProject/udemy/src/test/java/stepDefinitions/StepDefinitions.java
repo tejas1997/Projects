@@ -1,21 +1,20 @@
 package stepdefinitions;
 
+import java.io.File;
+
+import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
-import java.time.Duration;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.apache.commons.io.FileUtils; 
-import java.io.File;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.By;
-import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.cy_gb.Anrhegediga.Anrhegedigas;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -37,13 +36,13 @@ public class StepDefinitions {
     // Initialize WebDriver here (e.g., using WebDriverManager or manually)
     // Example: driver = new ChromeDriver();
     ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.addArguments("--headless=new");
     chromeOptions.addArguments("--window-size=1920,1080");
     chromeOptions.addArguments("--remote-allow-origins=*");
 
     String os = System.getProperty("os.name").toLowerCase();
 
     if (os.contains("linux")) {
+    chromeOptions.addArguments("--headless=new");    
     chromeOptions.addArguments("--no-sandbox");
     chromeOptions.addArguments("--disable-dev-shm-usage");
     chromeOptions.addArguments("--disable-gpu");
