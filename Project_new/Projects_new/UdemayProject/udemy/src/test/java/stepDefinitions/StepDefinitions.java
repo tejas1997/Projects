@@ -3,10 +3,16 @@ package stepdefinitions;
 import org.openqa.selenium.PageLoadStrategy;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.apache.commons.io.FileUtils; 
+import java.io.File;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.By;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.testng.Assert;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -31,7 +37,7 @@ public class StepDefinitions {
     // Initialize WebDriver here (e.g., using WebDriverManager or manually)
     // Example: driver = new ChromeDriver();
     ChromeOptions chromeOptions = new ChromeOptions();
-    //chromeOptions.addArguments("--headless=new");
+    chromeOptions.addArguments("--headless=new");
     chromeOptions.addArguments("--window-size=1920,1080");
     chromeOptions.addArguments("--remote-allow-origins=*");
 
@@ -104,16 +110,28 @@ public String generateRandomString(int length) {
     * Step: Given I click on the submit button
     */
     @And("I click on the submit button")
-    public void i_click_on_the_submit_button() {
-        driver.findElement(By.xpath("//input[@value='SUBMIT']")).click();
+    public void i_click_on_the_submit_button() throws Exception {
+        WebElement submitButton = driver.findElement(By.xpath("//input[@value='SUBMIT']"));
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE); 
+        String filename = "screenshot_submit_" + System.currentTimeMillis() + ".png";
+        File destination = new File("target/screenshots/" + filename); 
+        org.apache.commons.io.FileUtils.copyFile(source, destination);
+        submitButton.click(); 
     }
 
     /**
     * Step: Then I should be presented with a successful submission message
     */
     @Then("I should be presented with a successful submission message")
-    public void i_should_be_presented_with_a_successful_submission_message() {
-        System.out.println("Test07");
+    public void i_should_be_presented_with_a_successful_submission_message() throws Exception {
+        WebElement successMessage = driver.findElement(By.xpath("//div[@id='contact_reply']/h1"));
+        Assert.assertEquals(successMessage.getText(), "Thank You for your Message!");
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        String filename = "screenshot_successMessage_" + System.currentTimeMillis() + ".png";
+        File destination = new File("target/screenshots/" + filename); 
+        org.apache.commons.io.FileUtils.copyFile(source, destination);
     }
     
 }
