@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run Cucumber",
+      "request": "launch",
+      "mainClass": "io.cucumber.core.cli.Main",
+      "args": [
+        "--plugin",
+        "pretty",
+        "--glue",
+        "stepdefinitions",
+        "src/test/resources"
+      ],
+      "console": "integratedTerminal"
+    }
+  ]
+}
