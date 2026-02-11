@@ -13,9 +13,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.By;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.cy_gb.Anrhegediga.Anrhegedigas;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -104,6 +104,26 @@ public String generateRandomString(int length) {
     @And("I enter a unique comment")
     public void i_enter_a_unique_comment() {
         driver.findElement(By.xpath("//textarea[@name='message']")).sendKeys("This is a unique comment " + generateRandomString(10) +".");
+    }
+
+    @When("I enter a specific first name {word}")
+    public void i_enter_a_specific_first_name_john(String firstName) 
+    {
+        driver.findElement(By.xpath("//input[@name='first_name']")).sendKeys(firstName);
+    }
+    
+    @And("I enter a specific last name {word}")
+    public void i_enter_a_specific_last_name_doe(String lastName) {
+        driver.findElement(By.xpath("//input[@name='last_name']")).sendKeys(lastName);
+    }
+
+    @And("I enter a specific email address {word}")
+    public void i_enter_a_specific_email_address(String emailAddress) {
+        driver.findElement(By.xpath("//input[@name='email']")).sendKeys(emailAddress);
+    }
+    @And("I enter a specific comment {string}")
+    public void i_enter_a_specific_comment(String string) {
+    driver.findElement(By.xpath("//textarea[@name='message']")).sendKeys(string);
     }
 
     /**

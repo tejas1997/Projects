@@ -8,3 +8,12 @@ Scenario: Validate Successful Submission - Unique Data
     And I enter a unique comment
     And I click on the submit button
     Then I should be presented with a successful submission message
+
+Scenario: Validate Successful Submission - Specific Data
+    Given I access the WeDriver University Contact Us Page
+    When I enter a specific first name John
+    And I enter a specific last name Doe
+    And I enter a specific email address johndoe11@gmail.com
+    And I enter a specific comment "This is john doe's comment."
+    And I click on the submit button
+    Then I should be presented with a successful submission message 
