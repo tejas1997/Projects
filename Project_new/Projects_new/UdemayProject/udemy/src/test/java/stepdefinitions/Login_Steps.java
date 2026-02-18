@@ -1,11 +1,20 @@
 package stepdefinitions;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
+import org.testng.Assert;
+import java.io.File;
+import java.time.Duration;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.io.FileUtils;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -13,6 +22,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+@SuppressWarnings("unused")
 public class Login_Steps {
     private WebDriver driver;
 
@@ -48,15 +58,15 @@ public class Login_Steps {
         driver.get("https://webdriveruniversity.com/Login-Portal/index.html");
     }
 
-    @When("I enter a valid username")
-    public void i_enter_a_valid_username() {
+    @When("I enter a valid username {string}")
+    public void i_enter_a_valid_username(String username) {
         // Enter valid credentials (replace with actual locators and values)
-        driver.findElement(By.xpath("//input[@name='Username']")).sendKeys("webdriver");
+        driver.findElement(By.xpath("//input[@id='text']")).sendKeys(username);
     }
 
-    @And("I enter a valid password")
-    public void i_enter_a_valid_password() {
-        driver.findElement(By.xpath("//input[@name='Password']")).sendKeys("webdriver123");
+    @And("I enter a valid password {string}")
+    public void i_enter_a_valid_password(String password) {
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
     }
 
     @And("I click on the Login button")
@@ -65,15 +75,16 @@ public class Login_Steps {
     }
 
     @Then("I should be presented with validation successful message")
-    public void i_should_be_presented_with_validation_successful_message() {
-        // Verify the successful login message (replace with actual verification logic)
-        String expectedMessage = "validation successful";
-        String actualMessage = driver.findElement(By.xpath("//h2[contains(text(), 'validation successful')]")).getText();
-        if (actualMessage.equals(expectedMessage)) {
-            System.out.println("Login was successful.");
-        } else {
-            System.out.println("Login failed.");
-        }
-    }
+    public void i_should_be_presented_with_validation_successful_message() throws Exception 
+    {
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
+        // Wait for alert
+        wait.until(ExpectedConditions.alertIsPresent());
+
+        // Switch to alert and get text
+        Alert alert = driver.switchTo().alert();
+        String actualMessage = alert.getText();
+        Assert.assertEquals(actualMessage, "validation succeeded");     
+    }
 }
