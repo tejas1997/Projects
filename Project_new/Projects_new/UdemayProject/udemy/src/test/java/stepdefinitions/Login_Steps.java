@@ -1,20 +1,17 @@
 package stepdefinitions;
 
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.Assert;
-import java.io.File;
-import java.time.Duration;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.commons.io.FileUtils;
+import org.testng.Assert;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -69,6 +66,17 @@ public class Login_Steps {
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
     }
 
+    @When("I enter an invalid username {string}")
+    public void i_enter_an_invalid_username(String username) {
+        // Enter valid credentials (replace with actual locators and values)
+        driver.findElement(By.xpath("//input[@id='text']")).sendKeys(username);
+    }
+
+    @And("I enter an invalid password {string}")
+    public void i_enter_an_invalid_password(String password) {
+        driver.findElement(By.xpath("//input[@id='password']")).sendKeys(password);
+    }
+
     @And("I click on the Login button")
     public void i_click_on_the_login_button() {
         driver.findElement(By.xpath("//button[@id='login-button']")).click();
@@ -86,5 +94,19 @@ public class Login_Steps {
         Alert alert = driver.switchTo().alert();
         String actualMessage = alert.getText();
         Assert.assertEquals(actualMessage, "validation succeeded");     
+    }
+
+    @Then("I should be presented with validation failed message")
+    public void i_should_be_presented_with_validation_failed_message() throws Exception 
+    {
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+        // Wait for alert
+        wait.until(ExpectedConditions.alertIsPresent());
+
+        // Switch to alert and get text
+        Alert alert = driver.switchTo().alert();
+        String actualMessage = alert.getText();
+        Assert.assertEquals(actualMessage, "validation failed");     
     }
 }
