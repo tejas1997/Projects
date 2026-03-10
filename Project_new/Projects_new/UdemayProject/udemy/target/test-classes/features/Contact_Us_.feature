@@ -1,20 +1,19 @@
 @contact_us
 Feature: WebDriver University Contact Us Page
 
-Background: Given I access the WebDriver University Contact Us Page
+Background:
+  Given I access the WebDriver University Contact Us Page
 
-Scenario: Validate Successful Submission - Unique Data
-    When I enter a unique first name
-    And I enter a unique last name
-    And I enter a unique email address
-    And I enter a unique comment
+Scenario Outline: Validate Successful Submission 
+    When I enter a firstname <first_name>
+    And I enter a lastname <last_name>
+    And I enter an email address <email_address>
+    And I enter a comment <comment>
     And I click on the submit button
-    Then I should be presented with a successful submission message
+    Then I should be presented with a submission message <submission_message>
 
-Scenario: Validate Successful Submission - Specific Data
-    When I enter a specific first name John
-    And I enter a specific last name Doe
-    And I enter a specific email address johndoe11@gmail.com
-    And I enter a specific comment "This is john doe's comment."
-    And I click on the submit button
-    Then I should be presented with a successful submission message 
+Examples:
+| first_name | last_name | email_address | comment | submission_message |
+| anonymous  | user01 | "anonymoususer01@email.com" | "anonymous user 01 commented" | "Thank You for your Message!" |
+| anonymous  | user02 | "anonymoususer02@email.com" | "anonymous user 02 commented" | "Thank You for your Message!" |
+| anonymous  | user03 | "anonymoususer03@email.com" | "anonymous user 03 commented" | "Thank You for your Message!" |
