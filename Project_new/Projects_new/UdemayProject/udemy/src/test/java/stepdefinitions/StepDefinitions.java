@@ -22,37 +22,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 public class StepDefinitions {
 
-    private WebDriver driver;
-
-    @Before
-    public void setUp() {
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--window-size=1920,1080");
-        chromeOptions.addArguments("--remote-allow-origins=*");
-
-        String os = System.getProperty("os.name").toLowerCase();
-
-        if (os.contains("linux")) {
-            chromeOptions.addArguments("--headless=new");
-            chromeOptions.addArguments("--no-sandbox");
-            chromeOptions.addArguments("--disable-dev-shm-usage");
-            chromeOptions.addArguments("--disable-gpu");
-        }
-
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-
-        driver = new ChromeDriver(chromeOptions);
-    }
-
-    @After
-    public void tearDown() {
-
-        if (driver != null) {
-            driver.quit();
-        }
-    }
-
     @Given("I access the WebDriver University Contact Us Page")
     public void i_access_the_WebDriver_University_Contact_Us_Page() {
 
