@@ -18,36 +18,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import stepdefinitions.hooks.Hooks;
 
 @SuppressWarnings("unused")
-public class Login_Steps {
-    private WebDriver driver;
-
-    @Before
-    public void setUp() {
-    // Initialize WebDriver here (e.g., using WebDriverManager or manually)
-    // Example: driver = new ChromeDriver();
-    ChromeOptions chromeOptions = new ChromeOptions();
-    chromeOptions.addArguments("--window-size=1920,1080");
-    chromeOptions.addArguments("--remote-allow-origins=*");
-
-    String os = System.getProperty("os.name").toLowerCase();
-
-    if (os.contains("linux")) {
-    chromeOptions.addArguments("--headless=new");    
-    chromeOptions.addArguments("--no-sandbox");
-    chromeOptions.addArguments("--disable-dev-shm-usage");
-    chromeOptions.addArguments("--disable-gpu");
-}
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-    driver = new ChromeDriver(chromeOptions);
-    }
-
-    @After
-    public void tearDown() {
-        // Quit WebDriver after each scenario
-        driver.quit();
-    }
+public class Login_Steps extends hooks.Hooks {
 
     @Given("I access the WebDriver University login Page")
     public void i_access_the_webdriver_university_login_page() {

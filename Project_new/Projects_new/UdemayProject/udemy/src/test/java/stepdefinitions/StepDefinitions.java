@@ -73,7 +73,6 @@ public class StepDefinitions {
 
     @And("I enter an email address {string}")
     public void i_enter_an_email_address(String emailAddress) {
-
         driver.findElement(By.name("email")).sendKeys(emailAddress);
     }
 
