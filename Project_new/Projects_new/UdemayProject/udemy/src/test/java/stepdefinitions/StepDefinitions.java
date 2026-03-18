@@ -20,7 +20,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import driver.DriverFactory;
 public class StepDefinitions {
+
+    private WebDriver driver;
 
     @Given("I access the WebDriver University Contact Us Page")
     public void i_access_the_WebDriver_University_Contact_Us_Page() {

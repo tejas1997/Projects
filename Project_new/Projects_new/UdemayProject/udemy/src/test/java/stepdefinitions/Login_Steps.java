@@ -21,8 +21,9 @@ import io.cucumber.java.en.When;
 import stepdefinitions.hooks.Hooks;
 
 @SuppressWarnings("unused")
-public class Login_Steps extends hooks.Hooks {
+public class Login_Steps {
 
+    private WebDriver driver;
     @Given("I access the WebDriver University login Page")
     public void i_access_the_webdriver_university_login_page() {
         // Navigate to the login page
