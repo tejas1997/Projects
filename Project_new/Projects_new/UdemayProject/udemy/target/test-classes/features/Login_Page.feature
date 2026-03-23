@@ -1,16 +1,17 @@
-@login_page
+@login_page @regression
 Feature: WebDriver University Login Page
 
-Scenario: Validate Successful login with valid username and password
-    Given I access the WebDriver University login Page
-    When I enter a valid username "webdriver"
-    And I enter a valid password "webdriver123"
-    And I click on the Login button 
-    Then I should be presented with validation successful message
+Background:
+  Given I access the WebDriver University login Page
 
-Scenario: Validate unsuccessful login with invalid username and password
-    Given I access the WebDriver University login Page
-    When I enter an invalid username "webdriverabc"
-    And I enter an invalid password "webdriver12345"
+Scenario Outline: Validate Successful login with valid username and password
+    When I enter a username "<username>"
+    And I enter a password "<password>"
     And I click on the Login button 
-    Then I should be presented with validation failed message
+    Then I should be presented with validation message "<validation_message>"
+
+Examples:
+| username | password | validation_message |
+| webdriver | webdriver123 | validation succeeded |
+| webdriver | webdriver | validation failed |
+
