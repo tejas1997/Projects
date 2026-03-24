@@ -4,85 +4,61 @@ import java.time.Duration;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import driver.DriverFactory;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import static driver.DriverFactory.getDriver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import stepdefinitions.hooks.Hooks;
 
-@SuppressWarnings("unused")
 public class Login_Steps {
 
     private WebDriver driver;
+
+    public Login_Steps() {
+        driver = getDriver();
+    }
+
     @Given("I access the WebDriver University login Page")
     public void i_access_the_webdriver_university_login_page() {
-        // Navigate to the login page
-        DriverFactory.getDriver().get("https://webdriveruniversity.com/Login-Portal/index.html");
+        driver.get("https://webdriveruniversity.com/Login-Portal/index.html");
     }
 
-    @When("I enter a valid username {string}")
-    public void i_enter_a_valid_username(String username) {
-        // Enter valid credentials (replace with actual locators and values)
-        DriverFactory.getDriver().findElement(By.xpath("//input[@id='text']")).sendKeys(username);
+    @When("I enter a username {string}")
+    public void i_enter_a_username(String username) {
+        driver.findElement(By.id("text")).clear();
+        driver.findElement(By.id("text")).sendKeys(username);
     }
 
-    @And("I enter a valid password {string}")
-    public void i_enter_a_valid_password(String password) {
-        DriverFactory.getDriver().findElement(By.xpath("//input[@id='password']")).sendKeys(password);
-    }
-
-    @When("I enter an invalid username {string}")
-    public void i_enter_an_invalid_username(String username) {
-        // Enter valid credentials (replace with actual locators and values)
-        DriverFactory.getDriver().findElement(By.xpath("//input[@id='text']")).sendKeys(username);
-    }
-
-    @And("I enter an invalid password {string}")
-    public void i_enter_an_invalid_password(String password) {
-        DriverFactory.getDriver().findElement(By.xpath("//input[@id='password']")).sendKeys(password);
+    @And("I enter a password {string}")
+    public void i_enter_a_password(String password) {
+        driver.findElement(By.id("password")).clear();
+        driver.findElement(By.id("password")).sendKeys(password);
     }
 
     @And("I click on the Login button")
     public void i_click_on_the_login_button() {
-        DriverFactory.getDriver().findElement(By.xpath("//button[@id='login-button']")).click();
+        driver.findElement(By.id("login-button")).click();
     }
 
-    @Then("I should be presented with validation successful message")
-    public void i_should_be_presented_with_validation_successful_message() throws Exception 
-    {
-       WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(5));
+    @Then("I should be presented with validation message {string}")
+    public void i_should_be_presented_with_validation_message(String expectedMessage) {
 
-        // Wait for alert
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
+        // Wait for alert to appear
         wait.until(ExpectedConditions.alertIsPresent());
 
-        // Switch to alert and get text
-        Alert alert = DriverFactory.getDriver().switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         String actualMessage = alert.getText();
-        Assert.assertEquals(actualMessage, "validation succeeded");     
-    }
 
-    @Then("I should be presented with validation failed message")
-    public void i_should_be_presented_with_validation_failed_message() throws Exception 
-    {
-       WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(5));
+        Assert.assertEquals(actualMessage, expectedMessage);
 
-        // Wait for alert
-        wait.until(ExpectedConditions.alertIsPresent());
-
-        // Switch to alert and get text
-        Alert alert = DriverFactory.getDriver().switchTo().alert();
-        String actualMessage = alert.getText();
-        Assert.assertEquals(actualMessage, "validation failed");     
+        // Close alert (important)
+        alert.accept();
     }
 }
