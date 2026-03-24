@@ -14,4 +14,5 @@ Examples:
 | username | password | validation_message |
 | webdriver | webdriver123 | validation succeeded |
 | webdriver | webdriver | validation failed |
+| anonymus | webdriver | validation failed |
 

@@ -1,5 +1,10 @@
 package driver;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,9 +27,7 @@ public class DriverFactory {
     private static WebDriver createDriver() {
         WebDriver driver = null;
 
-        String browseString = "chrome";
-
-        switch (browseString) {
+        switch (getBrowserType()) {
             case "chrome" -> {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--window-size=1920,1080");
@@ -44,14 +47,11 @@ public class DriverFactory {
             case "firefox" -> {
             FirefoxOptions firefoxOptions = new FirefoxOptions();
             firefoxOptions.addArguments("--window-size=1920,1080");
-            firefoxOptions.addArguments("--remote-allow-origins=*");
+            firefoxOptions.addArguments("--headless");
             String os = System.getProperty("os.name").toLowerCase();
             if (os.contains("linux")) 
             {
                 firefoxOptions.addArguments("--headless=new");    
-                firefoxOptions.addArguments("--no-sandbox");
-                firefoxOptions.addArguments("--disable-dev-shm-usage");
-                firefoxOptions.addArguments("--disable-gpu");
             }
             firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             driver = new FirefoxDriver(firefoxOptions);
@@ -61,6 +61,19 @@ public class DriverFactory {
         driver.manage().window().maximize();
         return driver;
     }
+
+private static String getBrowserType() {
+        String browserType = null;
+        try{
+        Properties properties = new Properties();
+        FileInputStream file = new FileInputStream(System.getProperty("user.dir") + "/src/test/java/properties/config.properties");
+        properties.load(file);
+        browserType = properties.getProperty("browser").toLowerCase().trim();
+        } catch (IOException e) {
+            System.out.println("Error reading config.properties file: " + e.getMessage());
+        }
+        return browserType;
+    }    
     public static void cleanupDriver() 
     {
         driver.get().quit();
