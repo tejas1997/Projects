@@ -1,34 +1,26 @@
 package stepdefinitions;
 
-import java.io.File;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import driver.DriverFactory;
-public class StepDefinitions {
+import pageobjects.Base_PO;
+
+public class StepDefinitions extends Base_PO {
 
     private WebDriver driver;
 
     @Given("I access the WebDriver University Contact Us Page")
     public void i_access_the_WebDriver_University_Contact_Us_Page() {
 
-        DriverFactory.getDriver().get("https://webdriveruniversity.com/Contact-Us/contactus.html");
+        navigateTo("https://webdriveruniversity.com/Contact-Us/contactus.html");
     }
 
     @When("I enter a firstname {word}")
