@@ -67,14 +67,5 @@ public class StepDefinitions {
         WebElement successMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='contact_reply']/h1")));
 
         Assert.assertEquals(successMessage.getText(), expectedMessage);
-
-        TakesScreenshot ts = (TakesScreenshot) DriverFactory.getDriver();
-        File source = ts.getScreenshotAs(OutputType.FILE);
-
-        String filename = "screenshot_" + System.currentTimeMillis() + ".png";
-
-        File destination = new File("target/screenshots/" + filename);
-
-        org.apache.commons.io.FileUtils.copyFile(source, destination);
     }
 }
