@@ -47,7 +47,6 @@ public class DriverFactory {
             case "firefox" -> {
             FirefoxOptions firefoxOptions = new FirefoxOptions();
             firefoxOptions.addArguments("--window-size=1920,1080");
-            firefoxOptions.addArguments("--headless");
             String os = System.getProperty("os.name").toLowerCase();
             if (os.contains("linux")) 
             {
