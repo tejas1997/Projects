@@ -1,0 +1,6 @@
+/target/generated-sources/
+/target/maven-status/
+/target/surefire-reports/
+/target/test-classes/
+/target/cucumber-reports.html/
+/target/cucumber-reports.json

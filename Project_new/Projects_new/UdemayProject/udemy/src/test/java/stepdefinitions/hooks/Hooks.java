@@ -10,7 +10,6 @@ import static driver.DriverFactory.getDriver;
 import java.sql.Timestamp;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.OutputType;
-import org.testng.annotations.AfterTest;
 
 public class Hooks 
 {

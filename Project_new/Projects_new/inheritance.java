@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 class Add {
     int a,b,sum;
+
     public int Add(int a, int b) {
         sum = a+b;
         return sum;
