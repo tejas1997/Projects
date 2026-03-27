@@ -1,4 +1,4 @@
-stepdefinitions\StepDefinitions.class
 runners\TestRunner.class
 stepdefinitions\Login_Steps.class
+stepdefinitions\Contact_Us_Steps.class
 stepdefinitions\hooks\Hooks.class

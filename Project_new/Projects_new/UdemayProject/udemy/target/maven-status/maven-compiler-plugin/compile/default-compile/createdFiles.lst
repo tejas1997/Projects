@@ -1,3 +1,4 @@
 pageobjects\Base_PO.class
 driver\DriverFactory.class
 pageobjects\Login_PO.class
+pageobjects\Contact_PO.class
