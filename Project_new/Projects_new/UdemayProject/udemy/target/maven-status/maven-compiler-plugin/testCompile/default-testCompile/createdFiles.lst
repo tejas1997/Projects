@@ -1,5 +1,4 @@
 stepdefinitions\StepDefinitions.class
 runners\TestRunner.class
-properties\config.properties
 stepdefinitions\Login_Steps.class
 stepdefinitions\hooks\Hooks.class

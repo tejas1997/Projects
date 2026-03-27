@@ -1,7 +1,6 @@
 package stepdefinitions;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,16 +10,13 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import pageobjects.Base_PO;
-
-public class StepDefinitions extends Base_PO {
-
-    private WebDriver driver;
+import driver.DriverFactory;
+public class StepDefinitions {
 
     @Given("I access the WebDriver University Contact Us Page")
     public void i_access_the_WebDriver_University_Contact_Us_Page() {
 
-        navigateTo("https://webdriveruniversity.com/Contact-Us/contactus.html");
+        DriverFactory.getDriver().get("https://webdriveruniversity.com/Contact-Us/contactus.html");
     }
 
     @When("I enter a firstname {word}")
