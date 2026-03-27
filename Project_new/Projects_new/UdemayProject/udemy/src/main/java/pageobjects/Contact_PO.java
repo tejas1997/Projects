@@ -1,8 +1,28 @@
 package pageobjects;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;  
 
 public class Contact_PO extends Base_PO {
+
+    private @FindBy(name = "first_name")
+    WebElement firstNameField;
+
+    private @FindBy(name = "last_name")
+    WebElement lastNameField;
+
+    private @FindBy(name = "email")
+    WebElement emailField;
+
+    private @FindBy(name = "message")
+    WebElement commentField;
+
+    private @FindBy(xpath = "//input[@value='SUBMIT']")
+    WebElement submitButton;
+
+    private @FindBy(xpath = "//div[@id='contact_reply']/h1")
+    WebElement submissionMessage;
 
     public Contact_PO() {
         super();
@@ -13,27 +33,27 @@ public class Contact_PO extends Base_PO {
     }
     
     public void setFirstName(String firstName) {
-        sendKeys(By.name("first_name"), firstName);
+        sendKeys(firstNameField, firstName);
     }
 
     public void setLastName(String lastName) {
-        sendKeys(By.name("last_name"), lastName);
+        sendKeys(lastNameField, lastName);
     }
 
     public void setEmail(String emailAddress) {
-        sendKeys(By.name("email"), emailAddress);
+        sendKeys(emailField, emailAddress);
     }
 
     public void setComment(String comment) {
-        sendKeys(By.name("message"), comment);
+        sendKeys(commentField, comment);
     }
 
     public void clickSubmitButton() {
-        waitForElementAndClick(By.xpath("//input[@value='SUBMIT']"));
+        waitForElementAndClick(submitButton);
     }
 
     public String getSubmissionMessage(String expectedMessage) throws Exception {
-        WebElement successMessage = waitForElement(By.xpath("//div[@id='contact_reply']/h1"));
+        WebElement successMessage = waitForElement(submissionMessage);
         return successMessage.getText();
     }
 

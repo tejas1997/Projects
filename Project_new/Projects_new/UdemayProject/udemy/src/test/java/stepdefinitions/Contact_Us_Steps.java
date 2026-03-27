@@ -9,7 +9,7 @@ import pageobjects.Base_PO;
 import pageobjects.Contact_PO;
 public class Contact_Us_Steps extends Base_PO {
 
-    public Contact_PO contact_po;
+    private Contact_PO contact_po;
 
     public Contact_Us_Steps(Contact_PO contact_po) {
         this.contact_po = contact_po;

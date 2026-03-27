@@ -8,8 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.By;
 import java.time.Duration;
+import org.openqa.selenium.Alert;
+import org.testng.Assert;
 
-public class Base_PO {
+    public class Base_PO {
     public Base_PO() {
         PageFactory.initElements(getDriver(), this);
     }
@@ -46,5 +48,12 @@ public class Base_PO {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }    
+
+     public Alert waitForAlert(String text) {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.alertIsPresent());
+        String alert_text = getDriver().switchTo().alert().getText();
+        Assert.assertEquals(alert_text, text);
+    }  
 }
 

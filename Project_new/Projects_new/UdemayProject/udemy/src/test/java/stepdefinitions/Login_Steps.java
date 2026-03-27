@@ -38,7 +38,6 @@ public class Login_Steps extends Base_PO {
     @Then("I should be presented with validation message {string}")
     public void i_should_be_presented_with_validation_message(String expectedMessage) {
 
-        String actualMessage = login_po.getAlertTextAndAccept(10);
-        Assert.assertEquals(actualMessage, expectedMessage);
+        waitForAlert(expectedMessage);
     }
 }

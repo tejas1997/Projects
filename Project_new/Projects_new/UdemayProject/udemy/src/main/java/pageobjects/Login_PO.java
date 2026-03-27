@@ -1,10 +1,5 @@
 package pageobjects;
-
-import java.time.Duration;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login_PO extends Base_PO {
 
@@ -26,17 +21,9 @@ public class Login_PO extends Base_PO {
 
     public void clickLoginButton() {
         waitForElementAndClick(By.id("login-button"));
-    }
+    } 
 
-    public Alert waitForAlert(int timeoutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(timeoutInSeconds));
-        return wait.until(ExpectedConditions.alertIsPresent());
+    public void validateTextOnAlert(String expectedMessage) {
+        waitForAlert(expectedMessage);
     }
-
-    public String getAlertTextAndAccept(int timeoutInSeconds) {
-    Alert alert = waitForAlert(timeoutInSeconds);
-    String text = alert.getText();
-    alert.accept();
-    return text;
-    }   
 }
