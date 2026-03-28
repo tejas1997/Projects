@@ -1,8 +1,9 @@
 package pageobjects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;  
+import org.openqa.selenium.support.FindBy;
+
+import utils.Global_Vars;
 
 public class Contact_PO extends Base_PO {
 
@@ -21,7 +22,7 @@ public class Contact_PO extends Base_PO {
     private @FindBy(xpath = "//input[@value='SUBMIT']")
     WebElement submitButton;
 
-    private @FindBy(xpath = "//div[@id='contact_reply']/h1")
+    private @FindBy(xpath = "//div[@id='contact_reply']/h1")    
     WebElement submissionMessage;
 
     public Contact_PO() {
@@ -29,7 +30,7 @@ public class Contact_PO extends Base_PO {
     }
 
     public void navigateTo_WebDriverUniversity_Contact_Us_Page() {
-        navigateTo("https://webdriveruniversity.com/Contact-Us/contactus.html");
+        navigateTo(Global_Vars.WEBDRIVER_UNIVERSITY_URL + "/Contact-Us/contactus.html");
     }
     
     public void setFirstName(String firstName) {
@@ -51,10 +52,4 @@ public class Contact_PO extends Base_PO {
     public void clickSubmitButton() {
         waitForElementAndClick(submitButton);
     }
-
-    public String getSubmissionMessage(String expectedMessage) throws Exception {
-        WebElement successMessage = waitForElement(submissionMessage);
-        return successMessage.getText();
-    }
-
 }

@@ -1,6 +1,5 @@
 package stepdefinitions;
 
-import org.testng.Assert;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -50,7 +49,6 @@ public class Contact_Us_Steps extends Base_PO {
 
     @Then("I should be presented with a submission message {string}")
     public void i_should_be_presented_with_a_submission_message(String expectedMessage) throws Exception {
-        String actualMessage = contact_po.getSubmissionMessage(expectedMessage);
-        Assert.assertEquals(actualMessage, expectedMessage);
+        validateText(expectedMessage);
     }
 }

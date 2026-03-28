@@ -1,11 +1,11 @@
 package stepdefinitions;
-import pageobjects.Base_PO;
-import pageobjects.Login_PO;
-import org.testng.Assert;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageobjects.Base_PO;
+import pageobjects.Login_PO;
 
 public class Login_Steps extends Base_PO {
 
@@ -37,7 +37,6 @@ public class Login_Steps extends Base_PO {
 
     @Then("I should be presented with validation message {string}")
     public void i_should_be_presented_with_validation_message(String expectedMessage) {
-
         waitForAlert(expectedMessage);
     }
 }
