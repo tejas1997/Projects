@@ -21,6 +21,7 @@ public class Base_PO {
     public WebDriver getDriver() {
         return DriverFactory.getDriver();
     }
+    
     public void navigateTo(String url){
         getDriver().get(url);
     }
