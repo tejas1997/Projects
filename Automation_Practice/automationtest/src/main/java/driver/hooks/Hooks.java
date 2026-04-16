@@ -20,7 +20,7 @@ public class Hooks
     @AfterStep
     public void screenShotOnFailure(Scenario scenario) {
         // Implement logic to capture screenshot on test failure if needed
-        if(scenario.isFailed()){
+        if(scenario.isFailed()){  
           Timestamp timestamp = new Timestamp(System.currentTimeMillis());
           String timeMilliseconds = Long.toString(timestamp.getTime());
 

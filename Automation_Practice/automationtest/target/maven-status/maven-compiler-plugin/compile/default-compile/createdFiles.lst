@@ -1,2 +1,4 @@
 driver\hooks\Hooks.class
 driver\DriverFactory.class
+pageobjects\Popup_PO.class
+pageobjects\BasePO.class

@@ -1,52 +1,43 @@
 package stepdefinitions;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;   
+import org.openqa.selenium.By;  
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import static driver.DriverFactory.getDriver;
-import static driver.DriverFactory.cleanupDriver;
+import pageobjects.BasePO;
+import pageobjects.Popup_PO;
 
-public class Popup_Dismiss {
+public class Popup_Dismiss extends BasePO {
 
+private Popup_PO popup_po;
+
+    public Popup_Dismiss(Popup_PO popup_po) {
+        this.popup_po = popup_po;
+    }
 
 @Given("I access the Flipkart homepage as a non-logged-in user")
 public void i_access_the_flipkart_homepage_as_a_non_logged_in_user() {
-    getDriver().get("https://www.flipkart.com/");
+    popup_po.navigateTo_Flipkart_Unauth_Home_Page();
 }
 
 @And("a login popup is displayed")
 public void a_login_popup_is_displayed() {
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-    WebElement loginPopup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='Blh9Gf']")));
-    Assert.assertTrue(loginPopup.isDisplayed());
+    popup_po.popupDisplayed();
 }
 
 @When("I click on the close button of the popup")
 public void i_click_on_the_close_button_of_the_popup() {
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-    WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@role='button']")));
-    closeButton.click();
+    popup_po.clickCloseButton();
 }
 
 @And("the login popup should be dismissed")
 public void the_login_popup_should_be_dismissed(){
-    try{
-   WebElement loginPopup = getDriver().findElement(By.xpath("//div[@class='Blh9Gf']"));
-    Assert.assertFalse(loginPopup.isDisplayed());
-}
-catch(org.openqa.selenium.NoSuchElementException e) {
-    Assert.assertTrue(true, "Popup is dismissed successfully");  
-}
+    popup_po.popupDismissed();
 }
 
 @And("I should be able to interact with the homepage without any obstruction")
