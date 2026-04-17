@@ -44,8 +44,23 @@ public class BasePO {
     {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         boolean isInvisible = wait.until(ExpectedConditions.invisibilityOf(element));
-        Assert.assertTrue(isInvisible, "Element should not be visible but is: " + element);
-        
+        Assert.assertTrue(isInvisible, "Element should not be visible but is: " + element);    
+    }
+
+    public void interactWithHomepage(WebElement element) 
+    {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        WebElement searchBox = wait.until(ExpectedConditions.visibilityOf(element));
+        Assert.assertTrue(searchBox.isDisplayed());
+    }
+
+    public void searchForProduct(WebElement element, String product) 
+    {
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        WebElement searchBox = wait.until(ExpectedConditions.visibilityOf(element));
+        searchBox.sendKeys(product);
+        searchBox.submit();
     }
 }
+
 

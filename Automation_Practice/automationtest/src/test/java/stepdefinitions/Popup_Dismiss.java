@@ -42,16 +42,12 @@ public void the_login_popup_should_be_dismissed(){
 
 @And("I should be able to interact with the homepage without any obstruction")
 public void i_should_be_able_to_interact_with_the_homepage_without_any_obstruction() {
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-    WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class= 'nw1UBF v1zwn25']")));
-    Assert.assertTrue(searchBox.isDisplayed());
+    popup_po.homepageInteraction();
 }
 
 @Then("I should be able to search for {string}")
-public void i_should_be_able_to_search_for(String product) {
-    WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
-    WebElement searchBox = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@class= 'nw1UBF v1zwn25']")));
-    searchBox.sendKeys(product);
-    searchBox.submit();
+public void i_should_be_able_to_search_for(String product) 
+{
+    popup_po.search_For_Product();
 }
 }

@@ -7,8 +7,15 @@ public class Popup_PO extends BasePO {
 
     private @FindBy(xpath = "//div[@class='Blh9Gf']") 
     WebElement popup;
+
     private @FindBy(xpath = "//span[@role='button']") 
     WebElement closeButton;
+
+    private @FindBy(xpath = "//input[@class= 'nw1UBF v1zwn25']")
+    WebElement searchBox;
+
+    private String product_1 = "iPhone";
+    private String product_2 = "nothing phone";
 
     public Popup_PO() 
     {
@@ -32,4 +39,12 @@ public class Popup_PO extends BasePO {
         waitForElementVisiblity(popup);
     }
     
+    public void homepageInteraction() {
+        interactWithHomepage(searchBox);
+    }
+
+    public void search_For_Product() {
+        searchForProduct(searchBox, product_1);
+        searchForProduct(searchBox, product_2);
+    }
 }
