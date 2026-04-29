@@ -3,6 +3,7 @@ package pageobjects;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -54,12 +55,13 @@ public class BasePO {
         Assert.assertTrue(searchBox.isDisplayed());
     }
 
-    public void searchForProduct(WebElement element, String product) 
+    public void searchForProduct(WebElement element, String productName) 
     {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         WebElement searchBox = wait.until(ExpectedConditions.visibilityOf(element));
-        searchBox.sendKeys(product);
-        searchBox.submit();
+        searchBox.clear();
+        searchBox.sendKeys(productName);
+        searchBox.sendKeys(Keys.ENTER);
     }
 }
 
