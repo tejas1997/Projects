@@ -1,9 +1,9 @@
 package pageobjects;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
 
-public class Popup_PO extends BasePO {
+public class Popup_PO extends BasePO 
+{
 
     private @FindBy(xpath = "//div[@class='Blh9Gf']") 
     WebElement popup;
@@ -27,23 +27,28 @@ public class Popup_PO extends BasePO {
         navigateTo("https://www.flipkart.com/");
     }
 
-    public void popupDisplayed() {
+    public void popupDisplayed() 
+    {
         waitForElement(popup);
     }
     
-    public void clickCloseButton() {
+    public void clickCloseButton() 
+    {
         waitForWebElementAndClickElement(closeButton);
     }
     
-    public void popupDismissed() {
+    public void popupDismissed() 
+    {
         waitForElementVisiblity(popup);
     }
     
-    public void homepageInteraction() {
+    public void homepageInteraction() 
+    {
         interactWithHomepage(searchBox);
     }
 
-    public void search_For_Product() {
+    public void search_For_Product() 
+    {
         searchForProduct(searchBox, product);
         searchForProduct(searchBox, product1);
     }

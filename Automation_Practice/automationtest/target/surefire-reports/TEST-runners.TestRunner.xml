@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="20.404" tests="2" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="runners.TestRunner" time="60.96" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Users\tejas\Downloads\tools\jdk-21_windows-x64_bin\jdk-21.0.10\bin"/>
-    <property name="sun.java.command" value="C:\Users\tejas\AppData\Local\Temp\surefire4439038212949998109\surefirebooter-20260422185403725_3.jar C:\Users\tejas\AppData\Local\Temp\surefire4439038212949998109 2026-04-22T18-54-03_576-jvmRun1 surefire-20260422185403725_1tmp surefire_0-20260422185403725_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\tejas\AppData\Local\Temp\surefire7686953964424010914\surefirebooter-20260423150908265_3.jar C:\Users\tejas\AppData\Local\Temp\surefire7686953964424010914 2026-04-23T15-09-07_951-jvmRun1 surefire-20260423150908265_1tmp surefire_0-20260423150908265_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\tejas\Project\Automation_Practice\automationtest\target\test-classes;C:\Users\tejas\Project\Automation_Practice\automationtest\target\classes;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-java\4.40.0\selenium-java-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-api\4.40.0\selenium-api-4.40.0.jar;C:\Users\tejas\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.40.0\selenium-chrome-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.40.0\selenium-chromium-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-json\4.40.0\selenium-json-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.40.0\selenium-manager-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v142\4.40.0\selenium-devtools-v142-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v143\4.40.0\selenium-devtools-v143-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v144\4.40.0\selenium-devtools-v144-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.40.0\selenium-edge-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.40.0\selenium-firefox-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-http\4.40.0\selenium-http-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.40.0\selenium-ie-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.40.0\selenium-remote-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\com\google\guava\guava\33.5.0-jre\guava-33.5.0-jre.jar;C:\Users\tejas\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\tejas\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\tejas\.m2\repository\com\google\errorprone\error_prone_annotations\2.41.0\error_prone_annotations-2.41.0.jar;C:\Users\tejas\.m2\repository\com\google\j2objc\j2objc-annotations\3.1\j2objc-annotations-3.1.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-api\1.58.0\opentelemetry-api-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-context\1.58.0\opentelemetry-context-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-common\1.58.0\opentelemetry-common-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.58.0\opentelemetry-exporter-logging-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.58.0\opentelemetry-sdk-common-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.58.0\opentelemetry-sdk-extension-autoconfigure-spi-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.58.0\opentelemetry-sdk-extension-autoconfigure-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.58.0\opentelemetry-sdk-trace-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.58.0\opentelemetry-sdk-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.58.0\opentelemetry-sdk-metrics-1.58.0.jar;C:\Users\tejas\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.58.0\opentelemetry-sdk-logs-1.58.0.jar;C:\Users\tejas\.m2\repository\net\bytebuddy\byte-buddy\1.18.4\byte-buddy-1.18.4.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-os\4.40.0\selenium-os-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.40.0\selenium-safari-driver-4.40.0.jar;C:\Users\tejas\.m2\repository\org\seleniumhq\selenium\selenium-support\4.40.0\selenium-support-4.40.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-java\7.34.2\cucumber-java-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-core\7.34.2\cucumber-core-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-gherkin\7.34.2\cucumber-gherkin-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.34.2\cucumber-gherkin-messages-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\gherkin\36.1.0\gherkin-36.1.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\messages\30.1.0\messages-30.1.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\messages-ndjson\0.3.0\messages-ndjson-0.3.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\pretty-formatter\2.4.1\pretty-formatter-2.4.1.jar;C:\Users\tejas\.m2\repository\io\cucumber\query\14.7.0\query-14.7.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\teamcity-formatter\0.2.0\teamcity-formatter-0.2.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\testng-xml-formatter\0.7.0\testng-xml-formatter-0.7.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\usage-formatter\0.1.0\usage-formatter-0.1.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\tag-expressions\8.1.0\tag-expressions-8.1.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-expressions\18.1.0\cucumber-expressions-18.1.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-json-formatter\0.3.2\cucumber-json-formatter-0.3.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\datatable\7.34.2\datatable-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-plugin\7.34.2\cucumber-plugin-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\docstring\7.34.2\docstring-7.34.2.jar;C:\Users\tejas\.m2\repository\io\cucumber\html-formatter\22.3.0\html-formatter-22.3.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\junit-xml-formatter\0.11.0\junit-xml-formatter-0.11.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\ci-environment\12.0.0\ci-environment-12.0.0.jar;C:\Users\tejas\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\tejas\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\tejas\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\tejas\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\tejas\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-testng\7.34.2\cucumber-testng-7.34.2.jar;C:\Users\tejas\.m2\repository\org\apache\commons\commons-lang3\3.20.0\commons-lang3-3.20.0.jar;C:\Users\tejas\.m2\repository\commons-io\commons-io\2.21.0\commons-io-2.21.0.jar;C:\Users\tejas\.m2\repository\io\cucumber\cucumber-picocontainer\7.34.2\cucumber-picocontainer-7.34.2.jar;C:\Users\tejas\.m2\repository\org\picocontainer\picocontainer\2.15.2\picocontainer-2.15.2.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\tejas\AppData\Local\Temp\surefire4439038212949998109\surefirebooter-20260422185403725_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\tejas\AppData\Local\Temp\surefire7686953964424010914\surefirebooter-20260423150908265_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.10+8-LTS-217"/>
@@ -58,79 +58,17 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="runScenario[&quot;Dismiss login popup on the homepage&quot;, &quot;Flipkart Homepage Login Popup&quot;](1)" classname="runners.TestRunner" time="16.899">
-    <failure message="Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (439d0e50fb11a01ae639431a20e47349)] -&gt; xpath: //input[@class= &apos;nw1UBF v1zwn25&apos;]]&#10;(tried for 10 seconds with 500 milliseconds interval)&#10;Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50852}, goog:processID: 12812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50852/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 439d0e50fb11a01ae639431a20e47349" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (439d0e50fb11a01ae639431a20e47349)] -> xpath: //input[@class= 'nw1UBF v1zwn25']]
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: '4.40.0', revision: 'b3333f1'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50852}, goog:processID: 12812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50852/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 439d0e50fb11a01ae639431a20e47349
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at pageobjects.BasePO.interactWithHomepage(BasePO.java:54)
-	at pageobjects.Popup_PO.homepageInteraction(Popup_PO.java:43)
-	at stepdefinitions.Popup_Dismiss.i_should_be_able_to_interact_with_the_homepage_without_any_obstruction(Popup_Dismiss.java:45)
-	at ✽.I should be able to interact with the homepage without any obstruction(classpath:features/Popup_Dismiss.feature:9)
-]]></failure>
-    <system-out><![CDATA[
-Scenario Outline: Dismiss login popup on the homepage                          # classpath:features/Popup_Dismiss.feature:15
-
-Scenario Outline: Dismiss login popup on the homepage                          # classpath:features/Popup_Dismiss.feature:14
-  ✔ Given I access the Flipkart homepage as a non-logged-in user               # stepdefinitions.Popup_Dismiss.i_access_the_flipkart_homepage_as_a_non_logged_in_user()
-  ✔ Given I access the Flipkart homepage as a non-logged-in user               # stepdefinitions.Popup_Dismiss.i_access_the_flipkart_homepage_as_a_non_logged_in_user()
-  ✔ And a login popup is displayed                                             # stepdefinitions.Popup_Dismiss.a_login_popup_is_displayed()
-  ✔ When I click on the close button of the popup                              # stepdefinitions.Popup_Dismiss.i_click_on_the_close_button_of_the_popup()
-  ✔ And the login popup should be dismissed                                    # stepdefinitions.Popup_Dismiss.the_login_popup_should_be_dismissed()
-  ✔ And a login popup is displayed                                             # stepdefinitions.Popup_Dismiss.a_login_popup_is_displayed()
-  ✔ When I click on the close button of the popup                              # stepdefinitions.Popup_Dismiss.i_click_on_the_close_button_of_the_popup()
-  ✔ And the login popup should be dismissed                                    # stepdefinitions.Popup_Dismiss.the_login_popup_should_be_dismissed()
-  ✔ And I should be able to interact with the homepage without any obstruction # stepdefinitions.Popup_Dismiss.i_should_be_able_to_interact_with_the_homepage_without_any_obstruction()
-  ✘ And I should be able to interact with the homepage without any obstruction # stepdefinitions.Popup_Dismiss.i_should_be_able_to_interact_with_the_homepage_without_any_obstruction()
-        org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on windows (439d0e50fb11a01ae639431a20e47349)] -> xpath: //input[@class= 'nw1UBF v1zwn25']]
-        (tried for 10 seconds with 500 milliseconds interval)
-        Build info: version: '4.40.0', revision: 'b3333f1'
-        System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-        Driver info: org.openqa.selenium.chrome.ChromeDriver
-        Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50852}, goog:processID: 12812, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50852/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-        Session ID: 439d0e50fb11a01ae639431a20e47349
-        	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-        	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-        	at pageobjects.BasePO.interactWithHomepage(BasePO.java:54)
-        	at pageobjects.Popup_PO.homepageInteraction(Popup_PO.java:43)
-        	at stepdefinitions.Popup_Dismiss.i_should_be_able_to_interact_with_the_homepage_without_any_obstruction(Popup_Dismiss.java:45)
-        	at ✽.I should be able to interact with the homepage without any obstruction(classpath:features/Popup_Dismiss.feature:9)
-  ↷ Then I should be able to search for "nothing phone"                        # stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(java.lang.String)
-]]></system-out>
-    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
-SLF4J(W): Defaulting to no-operation (NOP) logger implementation
-SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
-Apr 22, 2026 6:54:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 144; Please update to a Selenium version that supports CDP version 147
-Apr 22, 2026 6:54:08 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 144; Please update to a Selenium version that supports CDP version 147
-]]></system-err>
-  </testcase>
-  <testcase name="runScenario[&quot;Dismiss login popup on the homepage&quot;, &quot;Flipkart Homepage Login Popup&quot;](2)" classname="runners.TestRunner" time="19.076">
-    <failure message="Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //input[@class= &apos;nw1UBF v1zwn25&apos;]&apos;&#10;(tried for 10 seconds with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException"><![CDATA[org.openqa.selenium.TimeoutException: 
-Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class= 'nw1UBF v1zwn25']'
-(tried for 10 seconds with 500 milliseconds interval)
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at pageobjects.BasePO.searchForProduct(BasePO.java:61)
-	at pageobjects.Popup_PO.search_For_Product(Popup_PO.java:48)
-	at stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(Popup_Dismiss.java:51)
-	at ✽.I should be able to search for "iphone"(classpath:features/Popup_Dismiss.feature:10)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class= 'nw1UBF v1zwn25']"}
+  <testcase name="runScenario[&quot;Dismiss login popup on the homepage&quot;, &quot;Flipkart Homepage Login Popup&quot;](1)" classname="runners.TestRunner" time="55.492">
+    <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=147.0.7727.56)&#10;Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [c5309559801de48c7e7bc64cd7a5120b, findElement {using=xpath, value=//input[@class= &apos;nw1UBF v1zwn25&apos;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55056}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55056/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: c5309559801de48c7e7bc64cd7a5120b" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=147.0.7727.56)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: '4.40.0', revision: 'b3333f1'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [546f0fded51cf589106f069ccf857737, findElement {value=//input[@class= 'nw1UBF v1zwn25'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62454}, goog:processID: 28752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62454/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 546f0fded51cf589106f069ccf857737
+Command: [c5309559801de48c7e7bc64cd7a5120b, findElement {using=xpath, value=//input[@class= 'nw1UBF v1zwn25']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55056}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55056/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5309559801de48c7e7bc64cd7a5120b
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -144,31 +82,36 @@ Session ID: 546f0fded51cf589106f069ccf857737
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:367)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:353)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:350)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207)
-	... 4 more
+	at jdk.proxy2/jdk.proxy2.$Proxy20.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4454)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:358)
+	at java.base/java.lang.String.valueOf(String.java:4454)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageobjects.BasePO.searchForProduct(BasePO.java:61)
+	at pageobjects.Popup_PO.search_For_Product(Popup_PO.java:48)
+	at stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(Popup_Dismiss.java:45)
+	at ✽.I should be able to search for "nothing phone"(classpath:features/Popup_Dismiss.feature:10)
 ]]></failure>
-    <system-out><![CDATA[  ✘ Then I should be able to search for "iphone"                               # stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(java.lang.String)
-        org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@class= 'nw1UBF v1zwn25']'
-        (tried for 10 seconds with 500 milliseconds interval)
-        	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-        	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-        	at pageobjects.BasePO.searchForProduct(BasePO.java:61)
-        	at pageobjects.Popup_PO.search_For_Product(Popup_PO.java:48)
-        	at stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(Popup_Dismiss.java:51)
-        	at ✽.I should be able to search for "iphone"(classpath:features/Popup_Dismiss.feature:10)
-        Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class= 'nw1UBF v1zwn25']"}
+    <system-out><![CDATA[
+Scenario Outline: Dismiss login popup on the homepage                          # classpath:features/Popup_Dismiss.feature:14
+
+Scenario Outline: Dismiss login popup on the homepage                          # classpath:features/Popup_Dismiss.feature:15
+  ✔ Given I access the Flipkart homepage as a non-logged-in user               # stepdefinitions.Popup_Dismiss.i_access_the_flipkart_homepage_as_a_non_logged_in_user()
+  ✔ And a login popup is displayed                                             # stepdefinitions.Popup_Dismiss.a_login_popup_is_displayed()
+  ✔ When I click on the close button of the popup                              # stepdefinitions.Popup_Dismiss.i_click_on_the_close_button_of_the_popup()
+  ✔ And the login popup should be dismissed                                    # stepdefinitions.Popup_Dismiss.the_login_popup_should_be_dismissed()
+  ✔ And I should be able to interact with the homepage without any obstruction # stepdefinitions.Popup_Dismiss.i_should_be_able_to_interact_with_the_homepage_without_any_obstruction()
+  ✔ Given I access the Flipkart homepage as a non-logged-in user               # stepdefinitions.Popup_Dismiss.i_access_the_flipkart_homepage_as_a_non_logged_in_user()
+  ✘ Then I should be able to search for "nothing phone"                        # stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(java.lang.String)
+        org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+        from unknown error: web view not found
           (Session info: chrome=147.0.7727.56)
-        For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
         Build info: version: '4.40.0', revision: 'b3333f1'
         System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
         Driver info: org.openqa.selenium.chrome.ChromeDriver
-        Command: [546f0fded51cf589106f069ccf857737, findElement {value=//input[@class= 'nw1UBF v1zwn25'], using=xpath}]
-        Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62454}, goog:processID: 28752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62454/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-        Session ID: 546f0fded51cf589106f069ccf857737
+        Command: [c5309559801de48c7e7bc64cd7a5120b, findElement {using=xpath, value=//input[@class= 'nw1UBF v1zwn25']}]
+        Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55056}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55056/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+        Session ID: c5309559801de48c7e7bc64cd7a5120b
         	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
         	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
         	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -182,12 +125,95 @@ Session ID: 546f0fded51cf589106f069ccf857737
         	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
         	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
         	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-        	at jdk.proxy2/jdk.proxy2.$Proxy20.isDisplayed(Unknown Source)
-        	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:367)
-        	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:353)
-        	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:350)
-        	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:207)
-        	... 4 more
+        	at jdk.proxy2/jdk.proxy2.$Proxy20.toString(Unknown Source)
+        	at java.base/java.lang.String.valueOf(String.java:4454)
+        	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:358)
+        	at java.base/java.lang.String.valueOf(String.java:4454)
+        	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+        	at pageobjects.BasePO.searchForProduct(BasePO.java:61)
+        	at pageobjects.Popup_PO.search_For_Product(Popup_PO.java:48)
+        	at stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(Popup_Dismiss.java:45)
+        	at ✽.I should be able to search for "nothing phone"(classpath:features/Popup_Dismiss.feature:10)
+]]></system-out>
+    <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Apr 23, 2026 3:09:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 144; Please update to a Selenium version that supports CDP version 147
+Apr 23, 2026 3:09:31 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 147, returning the closest version; found: 144; Please update to a Selenium version that supports CDP version 147
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Dismiss login popup on the homepage&quot;, &quot;Flipkart Homepage Login Popup&quot;](2)" classname="runners.TestRunner" time="59.393">
+    <failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=147.0.7727.56)&#10;Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;&#10;System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [52e3163ab38647d2ed7823d656e5f1d8, findElement {using=xpath, value=//div[@class=&apos;Blh9Gf&apos;]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49674}, goog:processID: 30944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49674/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 52e3163ab38647d2ed7823d656e5f1d8" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[org.openqa.selenium.NoSuchWindowException: 
+no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=147.0.7727.56)
+Build info: version: '4.40.0', revision: 'b3333f1'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [52e3163ab38647d2ed7823d656e5f1d8, findElement {using=xpath, value=//div[@class='Blh9Gf']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49674}, goog:processID: 30944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49674/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 52e3163ab38647d2ed7823d656e5f1d8
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4454)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:358)
+	at java.base/java.lang.String.valueOf(String.java:4454)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at pageobjects.BasePO.waitForElement(BasePO.java:32)
+	at pageobjects.Popup_PO.popupDisplayed(Popup_PO.java:31)
+	at stepdefinitions.Popup_Dismiss.a_login_popup_is_displayed(Popup_Dismiss.java:24)
+	at ✽.a login popup is displayed(classpath:features/Popup_Dismiss.feature:6)
+]]></failure>
+    <system-out><![CDATA[  ✘ And a login popup is displayed                                             # stepdefinitions.Popup_Dismiss.a_login_popup_is_displayed()
+        org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+        from unknown error: web view not found
+          (Session info: chrome=147.0.7727.56)
+        Build info: version: '4.40.0', revision: 'b3333f1'
+        System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+        Driver info: org.openqa.selenium.chrome.ChromeDriver
+        Command: [52e3163ab38647d2ed7823d656e5f1d8, findElement {using=xpath, value=//div[@class='Blh9Gf']}]
+        Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\tejas\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49674}, goog:processID: 30944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49674/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+        Session ID: 52e3163ab38647d2ed7823d656e5f1d8
+        	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+        	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+        	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+        	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+        	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+        	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+        	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+        	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+        	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+        	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:424)
+        	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:418)
+        	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+        	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+        	at jdk.proxy2/jdk.proxy2.$Proxy20.toString(Unknown Source)
+        	at java.base/java.lang.String.valueOf(String.java:4454)
+        	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:358)
+        	at java.base/java.lang.String.valueOf(String.java:4454)
+        	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+        	at pageobjects.BasePO.waitForElement(BasePO.java:32)
+        	at pageobjects.Popup_PO.popupDisplayed(Popup_PO.java:31)
+        	at stepdefinitions.Popup_Dismiss.a_login_popup_is_displayed(Popup_Dismiss.java:24)
+        	at ✽.a login popup is displayed(classpath:features/Popup_Dismiss.feature:6)
+  ↷ When I click on the close button of the popup                              # stepdefinitions.Popup_Dismiss.i_click_on_the_close_button_of_the_popup()
+  ↷ And the login popup should be dismissed                                    # stepdefinitions.Popup_Dismiss.the_login_popup_should_be_dismissed()
+  ↷ And I should be able to interact with the homepage without any obstruction # stepdefinitions.Popup_Dismiss.i_should_be_able_to_interact_with_the_homepage_without_any_obstruction()
+  ↷ Then I should be able to search for "iphone"                               # stepdefinitions.Popup_Dismiss.i_should_be_able_to_search_for(java.lang.String)
 ]]></system-out>
   </testcase>
 </testsuite>
