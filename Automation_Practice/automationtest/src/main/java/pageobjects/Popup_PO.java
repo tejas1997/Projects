@@ -1,6 +1,6 @@
 package pageobjects;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class Popup_PO extends BasePO 
 {
@@ -13,9 +13,6 @@ public class Popup_PO extends BasePO
 
     private @FindBy(xpath = "//input[@class= 'nw1UBF v1zwn25']")
     WebElement searchBox;
-
-    private String product = "iPhone";
-    private String product1 = "nothing phone";
 
     public Popup_PO() 
     {
@@ -47,9 +44,8 @@ public class Popup_PO extends BasePO
         interactWithHomepage(searchBox);
     }
 
-    public void search_For_Product() 
+    public void search_For_Product(String searchItem) 
     {
-        searchForProduct(searchBox, product);
-        searchForProduct(searchBox, product1);
+        searchForProduct(searchBox, searchItem);
     }
 }

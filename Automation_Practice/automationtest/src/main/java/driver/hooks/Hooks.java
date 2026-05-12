@@ -1,20 +1,23 @@
 package driver.hooks;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import static driver.DriverFactory.getDriver;
-import static driver.DriverFactory.cleanupDriver;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Scenario;
 import java.sql.Timestamp;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import static driver.DriverFactory.cleanupDriver;
+import static driver.DriverFactory.getDriver;
+import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class Hooks 
 {
     @Before
     public void setup() {
         getDriver();
+        getDriver().manage().deleteAllCookies();
     }
 
     @AfterStep
