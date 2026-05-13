@@ -6,9 +6,8 @@ public class IgnorePunctuation{
         Scanner scn = new Scanner(System.in);
         text = scn.nextLine();
         char[] c = text.toCharArray();
-        int i;
+        int i, count = 0;;
         for(i=0;i<c.length;i++){
-            int count = 0;
             boolean res = Character.isAlphabetic(c[i]);
             if(res==true)
             {
