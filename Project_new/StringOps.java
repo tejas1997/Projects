@@ -10,6 +10,7 @@ public class StringOps {
         String [] words = message.trim().split("\\s+");
         char[] c = trimmed.toCharArray();
         int n = trimmed.length(), word_count;
+        System.out.println(n);
         word_count = words.length;
         System.out.println("The total characters in string is: " + n);
         System.out.println("String in uppercase: " + message.toLowerCase());
