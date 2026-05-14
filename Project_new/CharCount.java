@@ -29,7 +29,9 @@ public class CharCount {
                     count++;
                 }
             }
-            System.out.println(c[i] + ":" + count);
+            //System.out.println(c[i] + ":" + count);
+            System.out.print(c[i] + "" + count);
         }
+        scn.close();    
     }
 }

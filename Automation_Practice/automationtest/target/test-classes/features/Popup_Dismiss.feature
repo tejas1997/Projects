@@ -1,3 +1,4 @@
+@Popup
 Feature: Flipkart Homepage Login Popup
 
   Scenario Outline: Dismiss login popup on the homepage
