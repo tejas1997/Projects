@@ -3,10 +3,8 @@ import java.util.Scanner;
 public class NthMinimum{
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int min = Integer.MIN_VALUE;
         int[] a = new int[5];
-        int[] b = new int[5];
-        int i,j,k;
+        int i,k;
         for(i=0; i<a.length; i++){
             a[i] = sc.nextInt();
         }
@@ -16,21 +14,20 @@ public class NthMinimum{
 
         for(k=0;k<a.length;k++)
         {
-            for(i=0;i<a.length;i++)
+            int minpos = k;
+            for(i=k+1;i<a.length;i++)
             {
-                min = a[i];
-                for(j=0;j<a.length;j++)
+                if(a[i]<a[minpos])
                 {
-                    if(a[j]<min)
-                    {
-                        min = a[j];
-                    }  
-                }      
+                    minpos = i;
+                }
             }
-            System.out.println(min);  
-            b[k] = min;
-            System.out.println("The sorted array is:" + b[k]);
+            int temp = a[k];
+            a[k] = a[minpos];
+            a[minpos] = temp;
+            System.out.println("The sorted array is:" + a[k]);
         }
+        System.out.println("The 2nd minimum is:" + a[1]);
         sc.close();
     }
 }
