@@ -1,23 +1,20 @@
-import java.util.Scanner;   
+import java.util.*;   
 public class DuplicateChar {
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        char duplicate = ' ';
-        int count = 0;
-        char[] charArray = str.toCharArray();
-        for(int i=0;i<charArray.length;i++){
-            for(int j=i+1;j<charArray.length;j++){
-                if(charArray[i] == charArray[j]){
-                    count++;
-                    duplicate = charArray[i];
-                    break;
-                }
-            }
+        String str = sc.nextLine().toLowerCase();
+        Map <Character, Integer> charCountMap = new HashMap<>();
+        for(char c: str.toCharArray()){
+            charCountMap.put(c, charCountMap.getOrDefault(c,0)+1);
         }
-        System.out.println("The number of duplicate characters is: " + count);
-        System.out.println("The duplicate character is: " + duplicate);
+        StringBuilder res = new StringBuilder();
+        charCountMap.forEach((key,val)->{
+            if(val>1){
+                res.append(key);
+            }
+        });
+        System.out.println("The duplicate characters are: " + res.toString());
         sc.close();
     }
 }

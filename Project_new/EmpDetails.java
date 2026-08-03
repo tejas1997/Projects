@@ -1,9 +1,10 @@
-public class EmpDetails{
-    public staticvoid main(String[] args){
+public class EmpDetails {
+    int empId;
+    String empName;
+    double empSalary;
+
+    public static void main(String[] args) {
         EmpDetails emp1 = new EmpDetails();
-        int empId;
-        String empName;
-        double empSalary;
         emp1.empId = 123;
         emp1.empName = "John Doe";
         emp1.empSalary = 50000;
