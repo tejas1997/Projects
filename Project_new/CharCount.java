@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class CharCount {
     public static void main(String []args)
@@ -6,8 +6,19 @@ public class CharCount {
         Scanner scn = new Scanner(System.in);
         String text;
         text = scn.nextLine();
+        Map<String, Integer> counts = new LinkedHashMap<String, Integer>();
+        String[] words = text.split("\\s+");
+        for(String word : words)
+        {
+            counts.put(word, counts.getOrDefault(word,0)+1);
+        }
+        StringBuilder sb = new StringBuilder();
+        counts.forEach((key, val)->{
+            sb.append(key).append("=").append(val).append("\n");
+        });
+        System.out.println(sb.toString());
         //System.out.println("The String is: " + text);
-        String text_1 = text.trim();
+        /*String text_1 = text.trim();
         char[] c = text_1.toCharArray();
         int i, n = c.length;
         for(i=0;i<=n-1;i++)
@@ -30,8 +41,8 @@ public class CharCount {
                 }
             }
             //System.out.println(c[i] + ":" + count);
-            System.out.print(c[i] + "" + count);
-        }
+            System.out.print(c[i] + "" + count);*/
+        //}
         scn.close();    
     }
 }
