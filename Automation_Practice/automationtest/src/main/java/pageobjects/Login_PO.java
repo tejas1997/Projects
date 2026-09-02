@@ -11,7 +11,7 @@ public class Login_PO extends Popup_PO
     private @FindBy(xpath = "//span[@role='button']") 
     WebElement closebutton;
 
-    private @FindBy(xpath = "//input[@class= 'nw1UBF v1zwn25']")
+    private @FindBy(xpath = "//input[@name='q']")
     WebElement searchbox;
 
     private @FindBy(xpath = "//div[@id='container']//span[text()='Login']") 

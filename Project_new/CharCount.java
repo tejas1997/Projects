@@ -6,14 +6,21 @@ public class CharCount {
         Scanner scn = new Scanner(System.in);
         String text;
         text = scn.nextLine();
-        Map<String, Integer> counts = new LinkedHashMap<String, Integer>();
-        String[] words = text.split("\\s+");
-        for(String word : words)
+        String text1 = text.toLowerCase();
+        //String[] words = text.split("\\s+");
+        char [] c = new char[text1.length()];
+        c = text1.toCharArray();
+        Map<String, Integer> charcounts = new LinkedHashMap<String, Integer>();
+        for(char ch : c)
         {
-            counts.put(word, counts.getOrDefault(word,0)+1);
+            charcounts.put(String.valueOf(ch), charcounts.getOrDefault(String.valueOf(ch), 0) + 1);
         }
+        /*for(String word : words)
+        {
+            charcounts.put(word, charcounts.getOrDefault(word, 0) + 1);
+        }*/
         StringBuilder sb = new StringBuilder();
-        counts.forEach((key, val)->{
+        charcounts.forEach((key, val)->{
             sb.append(key).append("=").append(val).append("\n");
         });
         System.out.println(sb.toString());

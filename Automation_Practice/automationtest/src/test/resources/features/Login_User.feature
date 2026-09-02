@@ -1,4 +1,4 @@
-@Login
+@Login @Regression
 Feature: Flipkart Homepage Login dropdown
 
     Scenario Outline: Login to Flipkart 

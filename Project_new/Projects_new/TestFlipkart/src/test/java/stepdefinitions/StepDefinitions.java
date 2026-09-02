@@ -33,18 +33,9 @@ public class StepDefinitions {
     * Step: Given user is on the Flipkart homepage
     */
     @Given("^user is on the Flipkart homepage$")
-    public void userIsOnTheFlipkartHomepage() {
-        try {
-            // TODO: Implement step logic for: user is on the Flipkart homepage
-            // Setup/precondition logic
-            // Perform login or user setup
-
-            // Add assertions for verification
-            // Assert.assertTrue("Step verification failed", condition);
-
-        } catch (Exception e) {
-            throw new RuntimeException("Failed to execute step: user is on the Flipkart homepage", e);
-        }
+    public void userIsOnTheFlipkartHomepage() 
+    {
+           
     }
 
     /**

@@ -11,7 +11,7 @@ public class Popup_PO extends BasePO
     private @FindBy(xpath = "//span[@role='button']") 
     WebElement closeButton;
 
-    private @FindBy(xpath = "//input[@class= 'nw1UBF v1zwn25']")
+    private @FindBy(xpath = "//input[@name='q']")
     WebElement searchBox;
 
     public Popup_PO() 

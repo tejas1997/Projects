@@ -19,8 +19,8 @@ public void i_access_the_flipkart_homepage_as_a_non_logged_in_user() {
     popup_po.navigateTo_Flipkart_Unauth_Home_Page();
 }
 
-@And("a login popup is displayed")
-public void a_login_popup_is_displayed() {
+@And("the login popup is displayed")
+public void the_login_popup_is_displayed() {
     popup_po.popupDisplayed();
 }
 

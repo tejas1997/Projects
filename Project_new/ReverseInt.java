@@ -19,6 +19,11 @@ public class ReverseInt {
         int number = scn.nextInt();
         ReverseInt obj = new ReverseInt();
         int result = obj.reverseint(number);
+        if(number == result){
+            System.out.println(number + " is a palindrome number.");
+        } else {
+            System.out.println(number + " is not a palindrome number.");
+        }
         System.out.println("The reversed number is: " + result);
         scn.close();
     }
