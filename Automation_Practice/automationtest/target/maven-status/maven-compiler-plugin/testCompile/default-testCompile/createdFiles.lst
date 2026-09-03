@@ -1,3 +1,4 @@
+stepdefinitions\Add_to_Cart.class
 stepdefinitions\Login_User.class
-runners\TestRunner.class
 stepdefinitions\Popup_Dismiss.class
+runners\TestRunner.class

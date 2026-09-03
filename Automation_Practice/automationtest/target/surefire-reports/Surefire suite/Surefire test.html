@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Aug 31 17:54:06 IST 2026</td>
+<td>Started on:</td><td>Thu Sep 03 17:41:15 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>67 seconds (67107 ms)</td>
+<tr><td>Total time:</td><td>31 seconds (31905 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,19 +76,116 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Dismiss login popup on the homepage", "Flipkart Homepage Login Popup"</td>
-<td></td>
-<td>21</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add an item from search results to cart", "Flipkart Add an item to Cart"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I search for an nothing phone&apos; and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;I search for an nothing phone&quot;)
+public void i_search_for_an_nothing_phone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I should be able to interact with the serach results&quot;)
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I click on the first item from search results&quot;)
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;I should be able to add item to cart&quot;)
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.I search for an nothing phone(classpath:features/Add_to_Cart.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace603184112", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace603184112'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I search for an nothing phone&apos; and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;I search for an nothing phone&quot;)
+public void i_search_for_an_nothing_phone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I should be able to interact with the serach results&quot;)
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I click on the first item from search results&quot;)
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;I should be able to add item to cart&quot;)
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.I search for an nothing phone(classpath:features/Add_to_Cart.feature:8)
+</pre></div></td>
+<td>11</td>
 <td>runners.TestRunner@6ca8564a</td></tr>
 <tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login to Flipkart", "Flipkart Homepage Login dropdown"</td>
-<td></td>
-<td>23</td>
-<td>runners.TestRunner@6ca8564a</td></tr>
-<tr>
-<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Dismiss login popup on the homepage", "Flipkart Homepage Login Popup"</td>
-<td></td>
-<td>20</td>
+<td title='runners.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runners.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add an item from search results to cart", "Flipkart Add an item to Cart"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I search for an iphone&apos; and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;I search for an iphone&quot;)
+public void i_search_for_an_iphone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I should be able to interact with the serach results&quot;)
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I click on the first item from search results&quot;)
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;I should be able to add item to cart&quot;)
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.I search for an iphone(classpath:features/Add_to_Cart.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace917704874", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace917704874'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;I search for an iphone&apos; and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;I search for an iphone&quot;)
+public void i_search_for_an_iphone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I should be able to interact with the serach results&quot;)
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;I click on the first item from search results&quot;)
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;I should be able to add item to cart&quot;)
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.I search for an iphone(classpath:features/Add_to_Cart.feature:8)
+</pre></div></td>
+<td>19</td>
 <td>runners.TestRunner@6ca8564a</td></tr>
 </table><p>
 </body>

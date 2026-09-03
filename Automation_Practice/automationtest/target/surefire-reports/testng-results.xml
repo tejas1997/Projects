@@ -1,75 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-31T17:54:06 IST" name="Surefire suite" finished-at="2026-08-31T17:55:13 IST" duration-ms="67107">
+  <suite started-at="2026-09-03T17:41:15 IST" name="Surefire suite" finished-at="2026-09-03T17:41:47 IST" duration-ms="31905">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@6ca8564a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-08-31T17:54:06 IST" name="Surefire test" finished-at="2026-08-31T17:55:13 IST" duration-ms="67107">
+    <test started-at="2026-09-03T17:41:15 IST" name="Surefire test" finished-at="2026-09-03T17:41:47 IST" duration-ms="31905">
       <class name="runners.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-08-31T17:54:06 IST" name="setUpClass" finished-at="2026-08-31T17:54:07 IST" duration-ms="965" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-09-03T17:41:15 IST" name="setUpClass" finished-at="2026-09-03T17:41:16 IST" duration-ms="827" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1b1c538d]]>
+                <![CDATA[org.testng.TestRunner@7e2c64]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-08-31T17:54:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-08-31T17:54:31 IST" duration-ms="23836" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-09-03T17:41:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-09-03T17:41:36 IST" duration-ms="19416" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login to Flipkart"]]>
+                <![CDATA["Add an item from search results to cart"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Flipkart Homepage Login dropdown"]]>
+                <![CDATA["Flipkart Add an item to Cart"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'I search for an iphone' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("I search for an iphone")
+public void i_search_for_an_iphone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I should be able to interact with the serach results")
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I click on the first item from search results")
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to add item to cart")
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I search for an iphone' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("I search for an iphone")
+public void i_search_for_an_iphone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I should be able to interact with the serach results")
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I click on the first item from search results")
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to add item to cart")
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.I search for an iphone(classpath:features/Add_to_Cart.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-08-31T17:54:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-08-31T17:54:52 IST" duration-ms="21286" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-09-03T17:41:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-09-03T17:41:47 IST" duration-ms="11407" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Dismiss login popup on the homepage"]]>
+                <![CDATA["Add an item from search results to cart"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Flipkart Homepage Login Popup"]]>
+                <![CDATA["Flipkart Add an item to Cart"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'I search for an nothing phone' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("I search for an nothing phone")
+public void i_search_for_an_nothing_phone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I should be able to interact with the serach results")
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I click on the first item from search results")
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to add item to cart")
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'I search for an nothing phone' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("I search for an nothing phone")
+public void i_search_for_an_nothing_phone() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I should be able to interact with the serach results")
+public void i_should_be_able_to_interact_with_the_serach_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I click on the first item from search results")
+public void i_click_on_the_first_item_from_search_results() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to add item to cart")
+public void i_should_be_able_to_add_item_to_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.I search for an nothing phone(classpath:features/Add_to_Cart.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-08-31T17:54:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-08-31T17:55:13 IST" duration-ms="20817" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Dismiss login popup on the homepage"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Flipkart Homepage Login Popup"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-08-31T17:55:13 IST" name="tearDownClass" finished-at="2026-08-31T17:55:13 IST" duration-ms="134" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runners.TestRunner@6ca8564a]" started-at="2026-09-03T17:41:47 IST" name="tearDownClass" finished-at="2026-09-03T17:41:47 IST" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
