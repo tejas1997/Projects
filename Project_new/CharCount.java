@@ -8,12 +8,14 @@ public class CharCount {
         text = scn.nextLine();
         String text1 = text.toLowerCase();
         //String[] words = text.split("\\s+");
-        char [] c = new char[text1.length()];
-        c = text1.toCharArray();
-        Map<String, Integer> charcounts = new LinkedHashMap<String, Integer>();
+        char [] c = text1.toCharArray();
+        Map<Character, Integer> charcounts = new LinkedHashMap<Character, Integer>();
         for(char ch : c)
         {
-            charcounts.put(String.valueOf(ch), charcounts.getOrDefault(String.valueOf(ch), 0) + 1);
+            if (Character.isWhitespace(ch)) {
+                continue;
+            }
+            charcounts.put(ch, charcounts.getOrDefault(ch, 0) + 1);
         }
         /*for(String word : words)
         {
